@@ -50,7 +50,7 @@ function Nav() {
             </div>
             <nav style={nav_style}>
                 <a style={nav_link} href='#'>Atlas</a>
-                <a style={nav_link} href='#'>My Clipboard</a>
+                <a style={nav_link} href='#'>Clipboard</a>
                 <a style={nav_link} href='#'>Login</a>
             </nav>
         </div>

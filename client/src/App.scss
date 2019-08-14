@@ -4,3 +4,8 @@ nav a:hover {
   border-bottom: 1px solid white !important;
 }
 
+.card-container {
+	display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
