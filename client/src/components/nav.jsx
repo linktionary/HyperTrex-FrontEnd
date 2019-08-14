@@ -46,7 +46,7 @@ function Nav() {
         <div style={nav_container}>
             <div style={logo_container}>
                 <img style={nav_logo_img}src={img}/>
-                <h1 style={nav_logo}>Linkasaurus</h1>
+                <h1 style={nav_logo}>Hyper<b>Trex</b></h1>
             </div>
             <nav style={nav_style}>
                 <a style={nav_link} href='#'>Atlas</a>

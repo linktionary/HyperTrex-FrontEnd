@@ -3,33 +3,7 @@ import './App.scss';
 import Nav from './components/Nav'
 import CardCreater from './components/cards/CardCreator'
 
-const testData = [
-  {
-  name: 'React Docs',
-  type: 'react',
-  description: 'lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.'
-  },
-  {
-  name: 'HTML Docs',
-  type: 'html',
-  description: 'lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.'
-  },
-  {
-  name: 'CSS Docs',
-  type: 'css',
-  description: 'lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.'
-  },
-  {
-  name: 'Javascript Docs',
-  type: 'javascript',
-  description: 'lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.'
-  },
-  {
-  name: 'Python Docs',
-  type: 'python',
-  description: 'lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.lorem ipsum dolar sit amet.'
-  },
-]
+import {testData} from './data/languageData'
 
 function App() {
   return (
