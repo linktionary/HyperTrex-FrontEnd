@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap');
 
 nav a:hover {
-  border-bottom: 1px solid white !important;
+  color: gold !important;
 }
 
 .card-container {
 	display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+b {
+  color: gold;
 }
