@@ -3,6 +3,7 @@ import React from 'react';
 import './CardCreator.scss'
 
 import {typeArr} from '../../data/languageData'
+
 function CardCreator(props) {
     
     //dynamic card styling
