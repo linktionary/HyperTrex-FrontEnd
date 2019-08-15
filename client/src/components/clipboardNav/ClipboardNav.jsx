@@ -1,6 +1,8 @@
 import React from 'react';
-
+import { typeArr } from '../../data/languageData'
 import './ClipboardNav.scss'
+
+
 
 function ClipboardNav() {
     return (
@@ -10,10 +12,9 @@ function ClipboardNav() {
                 <label>Filter: </label>
                 <select name="language">
                     <option value="all" selected>All</option>
-                    <option value="javascript">Javascript</option>
-                    <option value="css">CSS</option>
-                    <option value="html">Html</option>
-                    <option value="python">Python</option>
+                    {Object.keys(typeArr).map(key => {
+                        return <option key={key} value={key}>{key.charAt(0).toUpperCase()+key.substring(1)}</option>
+                    })}
                 </select>
                 <label>Size: </label>
                 <select name="size">

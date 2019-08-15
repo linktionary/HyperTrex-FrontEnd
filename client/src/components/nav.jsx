@@ -1,5 +1,5 @@
 import React from 'react'
-import img from '../assets/dino.png'
+import img from '../assets/logo.gif'
 
 const nav_container = {
     display: 'flex',
@@ -12,7 +12,7 @@ const nav_container = {
 const nav_logo = {
     lineHeight: '0',
     color: 'white',
-    fontFamily: 'Raleway'
+    fontFamily: 'Raleway',
 }
 
 const nav_style = {
@@ -37,6 +37,7 @@ const logo_container = {
 const nav_logo_img = {
     width: '35px',
     height: '36px',
+    
 }
 
 function Nav() {
@@ -45,7 +46,7 @@ function Nav() {
 
         <div style={nav_container}>
             <div style={logo_container}>
-                <img style={nav_logo_img}src={img}/>
+                <img style={nav_logo_img} src={img}/>
                 <h1 style={nav_logo}>Hyper<b>Trex</b></h1>
             </div>
             <nav style={nav_style}>
