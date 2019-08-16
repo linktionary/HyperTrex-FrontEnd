@@ -1,11 +1,9 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import CardCreator from '../cards/CardCreator'
 
 function CardDisplay(props) {
     
-    useEffect(() => {
 
-    }, [props.cardList])
     
     return (
         <div className='card-container'>

@@ -16,10 +16,14 @@ function ClipboardNav(props) {
             props.setFilteredCardList(props.cardList.filter(card => card.type == filterData.language))
         }
         props.setCardSize(filterData.size)
-    }, [filterData])
+    }, [filterData, props.cardList])
     
     function handleChanges(event) {
         setFilterData({...filterData, [event.target.name]: event.target.value})
+    }
+
+    function beginAdding() {
+        props.toggleAddingCard(true)
     }
 
     return (
@@ -48,7 +52,7 @@ function ClipboardNav(props) {
             </div>
             <div className='align-center'>
             <input type='search' placeholder='🔎Search your links..'></input>
-            <button>+</button>
+            <div className='create-card-button' onClick={beginAdding}>+</div>
             </div>
         </div>
         <hr className='nav-hr'/>

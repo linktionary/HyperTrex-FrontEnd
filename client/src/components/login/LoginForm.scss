@@ -1,0 +1,45 @@
+#login-form {
+    width: 450px;
+    background: white;
+    border-radius: 15px;
+    border-bottom: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 83vh;
+
+    h1 {
+        font-family: Raleway;
+        margin: 0;
+        padding: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+        
+    }
+
+    .text-input {
+        width: 75%;
+        height: 35px;
+        margin-bottom: 40px;
+        border: none;
+        color: grey;
+        border-bottom: 2px solid grey;
+    }
+
+    .keep-signed-in {
+        display: flex;
+        align-self: flex-end;
+    }
+
+    button {
+        height: 35px;
+        width: 200px;
+        border-radius: 8px;
+        border: none;
+        background: lightgrey;
+        color: grey;
+    }
+}
