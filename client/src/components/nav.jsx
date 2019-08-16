@@ -35,8 +35,8 @@ const logo_container = {
 }
 
 const nav_logo_img = {
-    width: '35px',
-    height: '36px',
+    width: '43px',
+    height: '42px',
     
 }
 

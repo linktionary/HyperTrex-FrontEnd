@@ -1,22 +1,28 @@
-import React from 'react';
-import './App.scss';
+import React, {useState} from 'react';
+
+//Component imports
 import Nav from './components/Nav'
-import CardCreater from './components/cards/CardCreator'
+import CardDisplay from './components/cardDisplay/CardDisplay'
 import ClipboardNav from './components/clipboardNav/ClipboardNav'
 
+//Data and stylesheets
+import './App.scss';
 import {testData} from './data/languageData'
 
 function App() {
+  
+  const [cardList, setCardList] = useState(testData)
+  const [filteredCardList, setFilteredCardList] = useState(cardList)
+  
+
+  console.log(cardList)
+  
   return (
     <div className="App">
 
       <Nav />
-      <ClipboardNav/>
-<div className='card-container'>
-{testData.map(data => {
-    return <CardCreater data={data}/>
-})}
-</div>
+      <ClipboardNav setFilteredCardList={setFilteredCardList} cardList={cardList}/>
+      <CardDisplay filteredCardList={filteredCardList}/>
 
     </div>
   );
