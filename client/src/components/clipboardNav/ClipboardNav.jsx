@@ -7,10 +7,15 @@ import './ClipboardNav.scss'
 
 function ClipboardNav(props) {
     
-    const [filterData, setFilterData] = useState({language: 'all', size: 'regular', display: 'both'})
+    const [filterData, setFilterData] = useState({language: 'all', size: 'regular', display: 'both', search: ''})
     
     useEffect(() => {
-        if (filterData.language == 'all') {
+        if (filterData.search.length > 0) {
+            props.setFilteredCardList(props.cardList.filter(card => 
+                card.name.toLowerCase().includes(filterData.search.toLowerCase()) ||
+                card.description.toLowerCase().includes(filterData.search.toLowerCase())
+            ))
+        } else if (filterData.language == 'all') {
             props.setFilteredCardList(props.cardList)
         } else {
             props.setFilteredCardList(props.cardList.filter(card => card.type == filterData.language))
@@ -51,7 +56,7 @@ function ClipboardNav(props) {
                 </select>
             </div>
             <div className='align-center'>
-            <input type='search' placeholder='🔎Search your links..'></input>
+            <input name='search' type='search' placeholder='🔎Search your links..' onChange={handleChanges}></input>
             <div className='create-card-button' onClick={beginAdding}>+</div>
             </div>
         </div>

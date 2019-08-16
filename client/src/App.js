@@ -39,7 +39,6 @@ function App() {
       <CardDisplay 
         filteredCardList={filteredCardList}
         cardSize={cardSize}
-        cardList={cardList}  
       />
 
 
