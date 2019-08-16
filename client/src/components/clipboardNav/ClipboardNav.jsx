@@ -7,7 +7,7 @@ import './ClipboardNav.scss'
 
 function ClipboardNav(props) {
     
-    const [filterData, setFilterData] = useState({language: 'all', size: 'large', display: 'both'})
+    const [filterData, setFilterData] = useState({language: 'all', size: 'regular', display: 'both'})
     
     useEffect(() => {
         if (filterData.language == 'all') {
@@ -15,6 +15,7 @@ function ClipboardNav(props) {
         } else {
             props.setFilteredCardList(props.cardList.filter(card => card.type == filterData.language))
         }
+        props.setCardSize(filterData.size)
     }, [filterData])
     
     function handleChanges(event) {
@@ -33,9 +34,9 @@ function ClipboardNav(props) {
                     })}
                 </select>
                 <label>Size: </label>
-                <select name="size" defaultValue='large'>
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
+                <select name="size" defaultValue='regular' onChange={handleChanges}>
+                    <option value="compact">Compact</option>
+                    <option value="regular">Regular</option>
                     <option value="large">Large</option>
                 </select>
                 <label>Display: </label>

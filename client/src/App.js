@@ -13,7 +13,7 @@ function App() {
   
   const [cardList, setCardList] = useState(testData)
   const [filteredCardList, setFilteredCardList] = useState(cardList)
-  
+  const [cardSize, setCardSize] = useState('regular')
 
   console.log(cardList)
   
@@ -21,8 +21,17 @@ function App() {
     <div className="App">
 
       <Nav />
-      <ClipboardNav setFilteredCardList={setFilteredCardList} cardList={cardList}/>
-      <CardDisplay filteredCardList={filteredCardList}/>
+
+      <ClipboardNav 
+        setFilteredCardList={setFilteredCardList} 
+        cardList={cardList} 
+        setCardSize={setCardSize}
+      />
+
+      <CardDisplay 
+        filteredCardList={filteredCardList}
+        cardSize={cardSize}  
+      />
 
     </div>
   );

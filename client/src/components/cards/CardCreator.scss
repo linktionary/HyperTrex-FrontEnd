@@ -1,4 +1,4 @@
-.card {
+.card-large {
 	width: 350px;
 	border-radius: 15px;
 	padding: 15px;
@@ -30,6 +30,102 @@
 			padding: 5px;
 			border: 0px solid white;
 			margin-top: 5px;
+			color: white;
+			font-size: 18px;
+			transition: 0.5s;
+			&:hover {
+				box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24)
+			}
+		}
+	}
+}
+
+.card-regular {
+	width: 231px;
+	border-radius: 15px;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 15px;
+	font-family: Lato;
+	transition: 0.5s;
+	.card-header {
+		display: flex;
+		align-items: center;
+        justify-content: space-between;
+		font-family: Raleway;
+		h2 {
+			font-size: 1.2em;
+		}
+		.card-img {
+			width: 50px;
+			height: 45px;
+		}
+	}
+	hr {
+		border: 1px solid lighten(lightgrey,10%);
+	}
+	.button-container {
+		display: flex;
+		justify-content: center;
+		.link-button {
+			height: 30px;
+			text-align: center;
+			border-radius: 8px;
+			margin: auto;
+			padding: 5px;
+			border: 0px solid white;
+			margin-top: 2px;
+			color: white;
+			font-size: 18px;
+			transition: 0.5s;
+			&:hover {
+				box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24)
+			}
+		}
+	}
+}
+
+.card-compact {
+	width: 231px;
+	border-radius: 15px;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 15px;
+	font-family: Lato;
+	transition: 0.5s;
+	.card-header {
+		display: flex;
+		align-items: center;
+        justify-content: space-between;
+		font-family: Raleway;
+		h2 {
+			font-size: 1.2em;
+			line-height: 0;
+			padding: none;
+		}
+		.card-img {
+			width: 40px;
+			height: 35px;
+		}
+	}
+	p {
+		opacity: 0;
+		transition: 1s;
+		display: none;
+	}
+	hr {
+		border: 1px solid lighten(lightgrey,10%);
+		display: none;
+	}
+	.button-container {
+		display: flex;
+		.link-button {
+			height: 30px;
+			text-align: center;
+			border-radius: 8px;
+			padding: 5px;
+			border: 0px solid white;
+			margin-top: 2px;
 			color: white;
 			font-size: 18px;
 			transition: 0.5s;
