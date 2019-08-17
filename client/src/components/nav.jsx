@@ -1,5 +1,6 @@
 import React from 'react'
 import img from '../assets/logo.gif'
+import {Link} from 'react-router-dom'
 
 const nav_container = {
     display: 'flex',
@@ -50,9 +51,9 @@ function Nav() {
                 <h1 style={nav_logo}>Hyper<b>Trex</b></h1>
             </div>
             <nav style={nav_style}>
-                <a style={nav_link} href='#'>Atlas</a>
-                <a style={nav_link} href='#'>Clipboard</a>
-                <a style={nav_link} href='#'>Login</a>
+                <Link style={nav_link} to="/">Atlas</Link>
+                <Link style={nav_link} to='/clipboard'>Clipboard</Link>
+                <Link style={nav_link} to='/login'>Login</Link>
             </nav>
         </div>
 
