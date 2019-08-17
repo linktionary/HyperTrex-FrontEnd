@@ -34,7 +34,7 @@ function CardCreator(props) {
             <hr/>
             
             <div className='button-container'>
-                <button style={button_style} className='link-button'>Open Link</button>
+                <a href="#" target="_blank"><button style={button_style} className='link-button'>Open Link</button></a>
             </div>
 
         </div>
