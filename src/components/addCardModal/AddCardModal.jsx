@@ -1,20 +1,25 @@
 import React, {useState} from 'react'
 import { typeArr } from '../../data/languageData'
 import './AddCardModal.scss'
+// Add in UUID
+import uuid from "uuid/v1";
 
 
 
 function AddCardModal(props) {  
-    
-    const [newCardData, setNewCardData] = useState({name: '', type: '', description: ''})
+	
+    const [newCardData, setNewCardData] = useState({name: '', type: '', description: '', id: ''})
     
     function handleChanges(event) {
         setNewCardData({...newCardData, [event.target.name] : event.target.value})
     }
 
     function submitChanges(event) {
-        event.preventDefault()
-        props.setCardList([...props.cardList, {...newCardData}])
+				/*
+				Fire off on a button click.
+				*/
+				event.preventDefault()
+        props.setCardList([...props.cardList, {...newCardData, id: uuid()}])
         
     }
 
