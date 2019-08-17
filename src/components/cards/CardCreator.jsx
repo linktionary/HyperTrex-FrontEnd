@@ -17,7 +17,7 @@ function CardCreator(props) {
     const button_style = {
         background: typeArr[props.data.type].accentColor
     }
-
+		console.log("FROM CARD CREATOR", props.data.id);
     return(
         <div style={card_style} className={`card-${props.cardSize}`}>
             
@@ -34,7 +34,7 @@ function CardCreator(props) {
             <hr/>
             
             <div className='button-container'>
-                <button style={button_style} className='link-button'>Open Link</button>
+                <a href="#" target="_blank"><button style={button_style} className='link-button'>Open Link</button></a>
             </div>
 
         </div>
