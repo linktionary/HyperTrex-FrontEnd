@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import './CardCreator.scss'
 
 import {typeArr} from '../../data/languageData'
 
 function CardCreator(props) {
+    
+    // useEffect(() => {
+
+    // },[props.cardSize])
     
     //dynamic card styling
     const card_style = {
@@ -15,7 +19,7 @@ function CardCreator(props) {
     }
 
     return(
-        <div style={card_style} className='card'>
+        <div style={card_style} className={`card-${props.cardSize}`}>
             
             <div className='card-header'>
                 <h2>{props.data.name}</h2>
@@ -24,7 +28,9 @@ function CardCreator(props) {
             </div>
             
             <hr/>
+            
             <p>{props.data.description}</p>
+            
             <hr/>
             
             <div className='button-container'>
