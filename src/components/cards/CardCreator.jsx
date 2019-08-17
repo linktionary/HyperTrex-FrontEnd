@@ -17,7 +17,7 @@ function CardCreator(props) {
     const button_style = {
         background: typeArr[props.data.type].accentColor
     }
-
+		console.log("FROM CARD CREATOR", props.data.id);
     return(
         <div style={card_style} className={`card-${props.cardSize}`}>
             
