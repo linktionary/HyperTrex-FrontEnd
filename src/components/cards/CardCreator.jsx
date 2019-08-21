@@ -8,10 +8,13 @@ function CardCreator(props) {
 
     
     const [moreOptions, setMoreOptions] = useState(false)
+    const [deleteMode, setDeleteMode] = useState(false)
 
     useEffect(() => {
         
     }, [])
+
+
 
     const card_style = {
         borderBottom: `5px solid ${typeArr[props.data.type].accentColor}`,
@@ -29,7 +32,12 @@ function CardCreator(props) {
         display: 'none'
     }
 
-		console.log("FROM CARD CREATOR", props.data.id);
+    //this function on click invokes a method in app.js that removes a card based upon its id
+    function deleteHandler() {
+        props.deleteCard(props.data.id);
+    }
+
+    console.log("FROM CARD CREATOR", props.data.id);
     return(
         <div style={card_style} className={`card-${props.cardSize}`}>
             
@@ -56,8 +64,39 @@ function CardCreator(props) {
 
             <div style={!moreOptions ? display_none : null } className='button-container'>
                 <button className="edit-button" style={button_style}>Edit</button>
-                <button className="delete-button">Delete</button>
-                <button className="less-options" style={dot_style} onClick={() => setMoreOptions(false)}>✖</button>
+                <div className="delete-container">
+
+                    <button 
+                        className="delete-button" 
+                        style={deleteMode ? display_none : null}
+                        onClick={() => setDeleteMode(true)}>
+                        Delete
+                    </button>
+
+                    <button 
+                        className="confirm-delete"
+                        style={!deleteMode ? display_none : null } 
+                        onClick={deleteHandler}>
+                        ✔
+                    </button>
+
+                    <button
+                        className="cancel-delete" 
+                        style={!deleteMode ? display_none : null }
+                        onClick={() => {
+                            setDeleteMode(false);
+                        }}
+                        >✖</button>
+                </div>
+                <button 
+                    className="less-options" 
+                    style={dot_style} 
+                    onClick={() => {
+                        setMoreOptions(false)
+                        setDeleteMode(false)
+                    }}>
+                    ✖
+                    </button>
             </div>
 
         </div>
@@ -66,3 +105,4 @@ function CardCreator(props) {
 }
 
 export default CardCreator
+

@@ -192,3 +192,26 @@
 		
 	}
 }
+
+.confirm-delete, .cancel-delete {
+	width: 46px;
+	height: 30px;
+	color: white;
+	border: none;
+	transition: 0.5s;
+	font-size: 15px;
+	margin-top: 2px;
+	&:hover {
+		box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24);
+	}
+}
+
+.confirm-delete {
+	border-radius: 8px 0px 0px 8px;
+	background: green;
+}
+
+.cancel-delete {
+	border-radius: 0px 8px 8px 0px;
+	background: red;
+}
