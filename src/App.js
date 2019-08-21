@@ -11,25 +11,24 @@ import Atlas from './components/atlas/Atlas'
 
 //Data and stylesheets
 import './App.scss';
-import { testData } from './data/languageData'
+import { testData, welcome } from './data/languageData'
 
 function App() {
 
-	alert('Welcome to HyperTrex™, we are still in beta and things may change drastically before the official release, still, enjoy your stay!')
-
-	const [cardList, setCardList] = useState(testData)
+	const [cardList, setCardList] = useState(localStorage.getItem('localCardList') ? JSON.parse(localStorage.getItem('localCardList')) : welcome)
 	const [filteredCardList, setFilteredCardList] = useState(cardList)
 	const [cardSize, setCardSize] = useState('regular')
 	const [addingCard, toggleAddingCard] = useState(false);
 	const [editingCard, toggleEditingCard] = useState(false);
 
 	useEffect(() => {
-
+		localStorage.setItem('localCardList', JSON.stringify(cardList))
 	}, [cardList])
 
 	function deleteCard(id) {
 
-		console.log("THIS IS FROM THE DELETE FUNCTION", id);
+		console.log("THIS IS FROM THE DELETE FUNCTION", id)
+		setCardList(cardList.filter(card => card.id !== id))
 
 	}
 
