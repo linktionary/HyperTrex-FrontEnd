@@ -8,7 +8,7 @@ import uuid from "uuid/v1";
 
 function AddCardModal(props) {  
 	
-    const [newCardData, setNewCardData] = useState({name: '', type: '', description: '', id: ''})
+    const [newCardData, setNewCardData] = useState({name: '', type: 'html', description: '', link: '', id: ''})
     
     function handleChanges(event) {
         setNewCardData({...newCardData, [event.target.name] : event.target.value})
@@ -46,6 +46,7 @@ function AddCardModal(props) {
                     </select>
                     </div>
                     <textarea rows='10' name='description' onChange={handleChanges}placeholder='Describe your link (optional)'></textarea>
+                    <input name='link' onChange={handleChanges} placeholder='Link (must include https:// or http://)'></input>
                     <button>Submit</button>
                 </form>
             <div id='modal-background' onClick={cancelAdding}></div>
