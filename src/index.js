@@ -5,6 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router} from 'react-router-dom';
 
+alert('Welcome to HyperTrex™, we are still in beta and things may change drastically before the official release, still, enjoy your stay!, p.s this means don\'t delete your bookmarks just yet.')
+
 ReactDOM.render(
 <Router>
 	<App/>

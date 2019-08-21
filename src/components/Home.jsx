@@ -17,6 +17,7 @@ function Home (props) {
       <CardDisplay 
         filteredCardList={props.filteredCardList}
         cardSize={props.cardSize}
+        deleteCard={props.deleteCard}
       />
 
 

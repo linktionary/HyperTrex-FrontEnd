@@ -9,7 +9,7 @@ function CardDisplay(props) {
     return (
         <div className='card-container'>
             {props.filteredCardList.map(data => {
-                return <CardCreator key={data.id} data={data} cardSize={props.cardSize}/>
+                return <CardCreator key={data.id} data={data} cardSize={props.cardSize} deleteCard={props.deleteCard}/>
             })}
         </div>
     )

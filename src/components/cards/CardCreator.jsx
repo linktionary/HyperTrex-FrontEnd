@@ -1,23 +1,43 @@
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import './CardCreator.scss'
 
 import {typeArr} from '../../data/languageData'
 
 function CardCreator(props) {
-    
-    // useEffect(() => {
 
-    // },[props.cardSize])
     
-    //dynamic card styling
+    const [moreOptions, setMoreOptions] = useState(false)
+    const [deleteMode, setDeleteMode] = useState(false)
+
+    useEffect(() => {
+        
+    }, [])
+
+
+
     const card_style = {
         borderBottom: `5px solid ${typeArr[props.data.type].accentColor}`,
     }
+    
     const button_style = {
         background: typeArr[props.data.type].accentColor
     }
-		console.log("FROM CARD CREATOR", props.data.id);
+    
+    const dot_style = {
+        color: typeArr[props.data.type].accentColor
+    }
+
+    const display_none = {
+        display: 'none'
+    }
+
+    //this function on click invokes a method in app.js that removes a card based upon its id
+    function deleteHandler() {
+        props.deleteCard(props.data.id);
+    }
+
+    console.log("FROM CARD CREATOR", props.data.id);
     return(
         <div style={card_style} className={`card-${props.cardSize}`}>
             
@@ -33,8 +53,50 @@ function CardCreator(props) {
             
             <hr/>
             
-            <div className='button-container'>
-                <a href="#" target="_blank"><button style={button_style} className='link-button'>Open Link</button></a>
+            <div style={moreOptions ? display_none : null } className='button-container'>
+                <a 
+                    href={props.data.link} 
+                    target="_blank">
+                    <button style={button_style} className='link-button'>Open Link</button>
+                </a>
+                <button style={dot_style} onClick={() => setMoreOptions(true)} className="more-options">•••</button>
+            </div>
+
+            <div style={!moreOptions ? display_none : null } className='button-container'>
+                <button className="edit-button" style={button_style}>Edit</button>
+                <div className="delete-container">
+
+                    <button 
+                        className="delete-button" 
+                        style={deleteMode ? display_none : null}
+                        onClick={() => setDeleteMode(true)}>
+                        Delete
+                    </button>
+
+                    <button 
+                        className="confirm-delete"
+                        style={!deleteMode ? display_none : null } 
+                        onClick={deleteHandler}>
+                        ✔
+                    </button>
+
+                    <button
+                        className="cancel-delete" 
+                        style={!deleteMode ? display_none : null }
+                        onClick={() => {
+                            setDeleteMode(false);
+                        }}
+                        >✖</button>
+                </div>
+                <button 
+                    className="less-options" 
+                    style={dot_style} 
+                    onClick={() => {
+                        setMoreOptions(false)
+                        setDeleteMode(false)
+                    }}>
+                    ✖
+                    </button>
             </div>
 
         </div>
@@ -43,3 +105,4 @@ function CardCreator(props) {
 }
 
 export default CardCreator
+
