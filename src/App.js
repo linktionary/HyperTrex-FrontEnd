@@ -19,6 +19,7 @@ function App() {
   const [filteredCardList, setFilteredCardList] = useState(cardList)
   const [cardSize, setCardSize] = useState('regular')
   const [addingCard, toggleAddingCard] = useState(false);
+  const [editingCard, toggleEditingCard] = useState(false);
 
   useEffect(() => {
     

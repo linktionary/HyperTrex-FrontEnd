@@ -21,20 +21,37 @@
 	}
 	.button-container {
 		display: flex;
-		justify-content: center;
-		.link-button {
+		justify-content: space-between;
+		align-items: center;
+		.link-button, .edit-button, .delete-button {
 			height: 40px;
 			text-align: center;
 			border-radius: 8px;
-			margin: auto;
 			padding: 5px;
 			border: 0px solid white;
 			margin-top: 5px;
 			color: white;
+			background: red;
 			font-size: 18px;
 			transition: 0.5s;
 			&:hover {
 				box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24)
+			}
+		}
+		.delete-button{
+			padding: 0px 20px 0px 20px;
+		}
+
+		.more-options, .less-options {
+			border: none;
+			background: none;
+			font-size: 30px;
+			padding: 0px;
+			line-height: 0;
+			margin: 0px;
+			transition: 0.5s;
+			&:hover {
+				font-size: 35px;
 			}
 		}
 	}
@@ -66,20 +83,38 @@
 	}
 	.button-container {
 		display: flex;
-		justify-content: center;
-		.link-button {
+		justify-content: space-between;
+		align-items: center;
+		.link-button, .edit-button, .delete-button {
 			height: 30px;
 			text-align: center;
 			border-radius: 8px;
-			margin: auto;
 			padding: 5px;
 			border: 0px solid white;
 			margin-top: 2px;
+			background-color: red;
 			color: white;
 			font-size: 18px;
 			transition: 0.5s;
 			&:hover {
-				box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24)
+				box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24);	
+			}
+		}
+
+		.delete-button{
+			padding: 0px 20px 0px 20px;
+		}
+
+		.more-options, .less-options {
+			border: none;
+			background: none;
+			font-size: 30px;
+			padding: 0px;
+			line-height: 0;
+			margin: 0px;
+			transition: 0.5s;
+			&:hover {
+				font-size: 35px;
 			}
 		}
 	}
@@ -119,7 +154,10 @@
 	}
 	.button-container {
 		display: flex;
-		.link-button {
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 5px;
+		.link-button, .edit-button, .delete-button {
 			height: 30px;
 			text-align: center;
 			border-radius: 8px;
@@ -127,11 +165,30 @@
 			border: 0px solid white;
 			margin-top: 2px;
 			color: white;
+			background: red;
 			font-size: 18px;
 			transition: 0.5s;
 			&:hover {
 				box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24)
 			}
 		}
+
+		.delete-button{
+			padding: 0px 20px 0px 20px;
+		}
+
+		.more-options, .less-options {
+			border: none;
+			background: none;
+			font-size: 30px;
+			padding: 0px;
+			line-height: 0;
+			margin: 0px;
+			transition: 0.5s;
+			&:hover {
+				font-size: 35px;
+			}
+		}
+		
 	}
 }

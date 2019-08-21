@@ -46,7 +46,7 @@ export const testData = [
 export const typeArr = {
         html: {
                 imgUrl: 'https://ui-ex.com/images/html5-svg-html-5.png',
-                accentColor: 'red'
+                accentColor: '#ff4500'
         },
         react: {
                 imgUrl: 'https://www.bryntum.com/wp-content/uploads/2018/10/reactlogo-400x357.png',
